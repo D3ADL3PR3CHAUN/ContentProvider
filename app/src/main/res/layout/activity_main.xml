@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mcgee.contentprovider.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_layout_firstname"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameET"
+                android:ems="10"
+                android:hint="Name">
+
+                <requestFocus/>
+            </EditText>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_layout_birthday"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/birthdayET"
+                android:layout_below="@id/nameET"
+                android:ems="10"
+                android:hint="Birthday">
+
+            </EditText>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addBtn"
+            android:text="@string/add_new_birthday"
+            android:layout_below="@id/birthdayET"
+            android:layout_marginTop="30dp"
+            android:onClick="addBirthday"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/showAllBtn"
+            android:text="@string/show_all_birthdays"
+            android:layout_below="@id/addBtn"
+            android:layout_marginTop="30dp"
+            android:onClick="showAllBirthdays"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteAllBtn"
+            android:text="@string/delete_all_birthdays"
+            android:layout_below="@id/showAllBtn"
+            android:layout_marginTop="30dp"
+            android:onClick="deleteAllBirthdays"/>
+
+    </LinearLayout>
+</ScrollView>
